@@ -19,6 +19,9 @@
 
         <label for="cpf">CPF</label>
         <input type="text" name="cpf">
+
+        <button id="submit">Enviar</button>
     </form>
+    <script src="js/script.js"></script>
 </body>
 </html>
