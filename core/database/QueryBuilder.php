@@ -55,6 +55,6 @@ class QueryBuilder {
     $statement = $this->pdo->prepare($sql);
     $statement->execute();
 
-    echo 'localhost:8000?indicator='.$parameters['unique_id'];
+    echo 'http://victorscher1.hospedagemdesites.ws/?indicator='.$parameters['unique_id'];
   }
 }

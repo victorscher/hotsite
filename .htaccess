@@ -1,0 +1,11 @@
+##### LOCAWEB - NAO REMOVER #####
+AddHandler php72-script .php
+suPHP_ConfigPath /home/victorscher1/
+##### LOCAWEB - NAO REMOVER #####
+
+RewriteEngine On
+ 
+RewriteCond %{SCRIPT_FILENAME} !-d
+RewriteCond %{SCRIPT_FILENAME} !-f
+ 
+RewriteRule ^.*$ ./index.php

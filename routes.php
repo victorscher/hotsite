@@ -5,3 +5,5 @@ $router->post('send', 'controllers/email.php');
 $router->post('send/indicator', 'controllers/emailToIndicator.php');
 $router->post('indicator', 'controllers/indicator.php');
 $router->post('store', 'controllers/store.php');
+$router->post('checkCpf', 'controllers/checkCpf.php');
+$router->post('checkEmail', 'controllers/checkEmail.php');

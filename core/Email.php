@@ -1,7 +1,5 @@
 <?php
 
-use Exeption;
-use stdClass;
 use PHPMailer\PHPMailer\PHPMailer;
 
 class Email {

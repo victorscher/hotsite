@@ -9,7 +9,7 @@ $email = new Email($app["config"]["email"]);
 
 $email->add(
   'Confirmação de cadastro FFWD', 
-  'Click no link para confirmar o seu cadastro <a href="http://localhost:8000/confirm?confirmKey='.$data['unique_id'].'">http://localhost:8000/confirm?confirmKey='.$data['unique_id'].'</a>',
+  'Click no link para confirmar o seu cadastro <a href="http://victorscher1.hospedagemdesites.ws/confirm?confirmKey='.$data['unique_id'].'">http://victorscher1.hospedagemdesites.ws/confirm?confirmKey='.$data['unique_id'].'</a>',
   $data['name'],
   $data['email']
 )->send();

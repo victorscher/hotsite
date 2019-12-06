@@ -9,5 +9,8 @@ let indicator = document.getElementById('indicator');
 let btnSubmit = document.getElementById('btnSubmit');
 
 let linkInput = document.getElementById('link');
-let btnPaste = document.getElementById('btnPaste');
-let successMsg = document.getElementById('successMsg');
+let btnCopy = document.getElementById('btn-copy');
+let clipBoard = document.getElementById('clipboard');
+let successMsg = document.getElementById('success-msg');
+
+let snackbar = document.getElementById("snackbar");

@@ -1,5 +1,39 @@
 //Função para fazer requisição http, registrar os dados da conversão e disparar e-mails
-let validToken;
+
+cpf.addEventListener('blur', event => {
+  fetch('/checkCpf', {
+    method:'POST',
+    body:JSON.stringify({
+      cpf:cpf.value
+    })
+  }).then(response => {
+    return response.json()
+  }).then(json => {
+    if(json != null){
+      alert('Este CPF já está cadastrado no sistema');
+      cpf.value = '';
+      return true;
+    }
+  });
+})
+
+email.addEventListener('blur', event => {
+  fetch('/checkEmail', {
+    method:'POST',
+    body:JSON.stringify({
+      email:email.value
+    })
+  }).then(response => {
+    return response.json()
+  }).then(json => {
+    if(json != null){
+      alert('Este E-Mail já está cadastrado no sistema');
+      email.value = '';
+      return true;
+    }
+  });
+})
+
 form.addEventListener('submit', event => {
   event.preventDefault();
   
@@ -20,16 +54,11 @@ form.addEventListener('submit', event => {
       let link = text;
       return link
     }).then((link) => {
-      name.hidden = true;
-      email.hidden = true;
-      telefone.hidden = true;
-      cpf.hidden = true;
-      btnSubmit.hidden =true;
+      form.style.display = "none";
   
       linkInput.value = link;
-      linkInput.hidden = false;
-      btnPaste.hidden = false;
-      successMsg.hidden = false;
+      clipBoard.hidden = false;
+      successMsg.style.display = "block";
     });
 
     fetch('/send', {
@@ -62,6 +91,7 @@ form.addEventListener('submit', event => {
         console.log(text);
       });
     });
+
   }else{
     alert("Preencha formulário corretamente!");
   }

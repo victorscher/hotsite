@@ -4,9 +4,13 @@ function copy() {
   var copyText = linkInput;
   copyText.select();
   document.execCommand("copy");
+  linkInput.blur();
+  snackbar.innerHTML = "Link copiado";
+  snackbar.className = "show";
+  setTimeout(function(){ snackbar.className = snackbar.className.replace("show", ""); }, 1500);
 }
 
-btnPaste.addEventListener("click", copy);
+btnCopy.addEventListener("click", copy);
 
 
 // Bootstrapper das mascaras

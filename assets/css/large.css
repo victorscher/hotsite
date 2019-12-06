@@ -1,0 +1,81 @@
+
+@media (min-width: 1600px){
+  .ball-1, .ball-2, .ball-3{
+    display: block;
+    position: absolute;
+    border-radius: 50%;
+    background-image: linear-gradient(to top, #f43b47 0%, #453a94 100%);  
+  }
+
+  .ball-1{
+    height: 110px;
+    width: 110px;
+    top: 120px;
+    left: 250px;
+  }
+
+  .ball-2{
+    height: 140px;
+    width: 140px;
+    bottom: 200px;
+    right: 240px;
+  }
+
+  .ball-3{
+    height: 60px;
+    width: 60px;
+    bottom: 270px;
+    left: 500px;
+  }
+
+  .ball-title{
+    height: 250px;
+    width: 250px;
+  }
+
+  .input{
+    margin-bottom: 0.7em;
+  }
+
+  .form{
+    margin-top:0.5em;
+    margin-bottom: 200px;
+  }
+
+  .title{
+    font-weight: lighter;
+    font-size: 1em;
+  }
+
+  .input[type="text"]{
+    color: black;
+    font-size: 1em;
+    line-height: 100%;
+  }
+  
+  .input[type="email"]{
+    color: black;
+    font-size: 1em;
+    line-height: 100%;
+  }
+
+  .btn{
+    padding: 0.9em;
+    border-radius: 2.5em;
+    font-size: 1em;
+  }
+
+  .success-msg{
+    margin-top: 40px;
+    margin-bottom: 15px;
+  }
+
+  .clipboard{
+    margin-bottom: 20px;
+  }
+
+  .confirmed-email{
+    margin-top:100px;
+    margin-bottom:320px;
+  }
+}
