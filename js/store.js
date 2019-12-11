@@ -10,7 +10,9 @@ cpf.addEventListener('blur', event => {
     return response.json()
   }).then(json => {
     if(json != null){
-      alert('Este CPF já está cadastrado no sistema');
+      snackbar.innerHTML = "Este CPF já está cadastrado no sistema!";
+      snackbar.className = "show";
+      setTimeout(function(){ snackbar.className = snackbar.className.replace("show", ""); }, 2300);
       cpf.value = '';
       return true;
     }
@@ -27,7 +29,9 @@ email.addEventListener('blur', event => {
     return response.json()
   }).then(json => {
     if(json != null){
-      alert('Este E-Mail já está cadastrado no sistema');
+      snackbar.innerHTML = "Este E-Mail já está cadastrado no sistema!";
+      snackbar.className = "show";
+      setTimeout(function(){ snackbar.className = snackbar.className.replace("show", ""); }, 2300);
       email.value = '';
       return true;
     }

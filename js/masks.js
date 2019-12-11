@@ -7,7 +7,7 @@ function copy() {
   linkInput.blur();
   snackbar.innerHTML = "Link copiado";
   snackbar.className = "show";
-  setTimeout(function(){ snackbar.className = snackbar.className.replace("show", ""); }, 1500);
+  setTimeout(function(){ snackbar.className = snackbar.className.replace("show", ""); }, 2300);
 }
 
 btnCopy.addEventListener("click", copy);
